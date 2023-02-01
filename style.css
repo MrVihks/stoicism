@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+    --blue: #33AAFA;
+    --white: #ffffff;
+    --dark: #404040;
+    --green: #0caf1a;
+    --red: #be1616;
+}
+
+*::selection {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+* {
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    padding: 0;
+    animation: type 0.3s linear;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    transition-duration: 350ms;
+    cursor: pointer;
+}
+
+section:nth-child(even) {
+    background-color: var(--blue);
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    box-shadow: 1px 1px 10px #404040;
+}
+
+.hidden {
+    padding: 2rem;
+    flex-direction: column;
+    display: none;
+}
+
+.hidden a {
+    color: var(--white);
+    margin: 1.5rem;
+}
+
+#hiddenbtn {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar {
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 1.2rem;
+}
+
+.navbar a {
+    color: var(--white);
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: clamp(22px, 1rem, 1vw);
+    color: var(--dark);
+}
+
+
+.showed {
+    display: flex;
+    position: absolute;
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100vh;
+    font-weight: 300;
+    font-size: clamp(16px, 1rem, 1vw);
+}
+
+.footer {
+    text-align: center;
+    color: var(--dark);
+    color: var(--white);
+    min-height: 20vh;
+    background-color: var(--blue);
+    margin-top: 5rem;
+}
+.footer a{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.footer h2{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+@keyframes type {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #hiddenbtn {
+        padding: 1rem;
+        display: flex;
+    }
+
+    .hometext,
+    .howcontent {
+        font-size: 1.3rem;
+        padding: 2.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        text-align: justify;
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+
+    .wordcontent {
+        color: var(--white);
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .image {
+        margin: auto;
+        margin-top: 5rem;
+        border-radius: 1.3rem;
+        display: flex;
+        width: 200px;
+        height: 200px;
+    }
+    section:nth-child(3){
+        min-height: 80vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar a:hover {
+        background-color: var(--white);
+        padding: 1.5rem;
+        color: var(--dark);
+    }
+
+    #hiddenbtn,
+    .showed {
+        display: none;
+    }
+
+    .navbar a {
+        display: inline;
+    }
+
+    .hometext,
+    .howcontent {
+        font-size: 1.4rem;
+        padding: 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: justify;
+    }
+
+    section:nth-child(1) {
+        min-height: 60vh;
+    }
+
+    .wordcontent {
+        color: var(--white);
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .image {
+        margin: 2rem;
+        border-radius: 3rem;
+        margin: auto;
+        margin-top: 5rem;
+        border-radius: 1.3rem;
+        display: flex;
+        width: 350px;
+        height: 350px;
+    }
+
+}
