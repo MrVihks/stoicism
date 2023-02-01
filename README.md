@@ -1,2 +1,3 @@
-# stoicism
-Um site que ensina sobre o estoicismo.
+# Estoicismo
+## Um site que ensina e mostra sobre o estoicismo.
+## Feito apenas por diversão...
