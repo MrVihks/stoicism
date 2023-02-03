@@ -28,6 +28,7 @@ a {
 }
 
 section:nth-child(even) {
+    color:var(--white);
     background-color: var(--blue);
 }
 
@@ -52,7 +53,13 @@ section:nth-child(even) {
     width: 30px;
     height: 30px;
 }
-
+.list li{
+    cursor: pointer;
+}
+.epictetorotate i{
+    animation: rotate 1s ease-in;
+    transform: rotate(180deg);
+}
 .navbar {
     text-align: center;
     background-color: var(--blue);
@@ -87,14 +94,13 @@ section:nth-child(even) {
     font-weight: 300;
     font-size: clamp(16px, 1rem, 1vw);
 }
-
-.footer {
-    text-align: center;
-    color: var(--dark);
-    color: var(--white);
-    min-height: 20vh;
-    background-color: var(--blue);
-    margin-top: 5rem;
+.rotate{
+    animation: rotate 0.6s linear;
+    transform: rotate(180deg);
+}
+.epictetorotate {
+    animation: rotate 1s alternate-reverse;
+    transform: rotate(0deg);
 }
 .footer a{
     color: var(--white);
@@ -104,7 +110,23 @@ section:nth-child(even) {
     color: var(--white);
     font-size: 1.5rem;
 }
-
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(60deg);
+    }
+    50%{
+        transform: rotate(120deg);
+    }
+    75%{
+        transform: rotate(160deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
 @keyframes type {
     from {
         opacity: 0;
@@ -123,9 +145,19 @@ section:nth-child(even) {
         padding: 1rem;
         display: flex;
     }
-
+    .mainphilosophers{
+        text-align: left;
+        font-size: 1.3rem;
+        text-align: justify;
+        margin-left: 2rem;
+        margin-right: 2em;
+    }
+    .mainphilosophers ul li{
+        margin-top: 0.3rem;
+        margin-left: 1.3rem;
+    }
     .hometext,
-    .howcontent {
+    .howcontent{
         font-size: 1.3rem;
         padding: 2.5rem;
         margin-left: 0.5rem;
@@ -170,9 +202,27 @@ section:nth-child(even) {
     section:nth-child(3){
         min-height: 80vh;
     }
+    .footer {
+        border-top: 0.1px solid var(--white);
+        text-align: center;
+        color: var(--white);
+        min-height: 10vh;
+        background-color: var(--blue);
+        margin-top: 5rem;
+    }
+    .list{
+        margin-top:3rem;
+    }
 }
 
 @media (min-width: 768px) {
+    .footer {
+        text-align: center;
+        color: var(--white);
+        min-height: 10vh;
+        background-color: var(--blue);
+        margin-top: 2.5 rem;
+    }
     .navbar a:hover {
         background-color: var(--white);
         padding: 1.5rem;
@@ -201,13 +251,13 @@ section:nth-child(even) {
         min-height: 60vh;
     }
 
-    .wordcontent {
+    .wordcontent p{
         color: var(--white);
         font-size: 1.5rem;
         text-align: justify;
         margin-top: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 15rem;
+        margin-right: 15rem;
         text-align: center;
     }
 
@@ -225,6 +275,25 @@ section:nth-child(even) {
         display: flex;
         width: 350px;
         height: 350px;
+    }
+    .mainphilosophers{
+        text-align: left;
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-left: 5rem;
+        margin-right: 5em;
+    }
+    .mainphilosophers li{
+        list-style-type: none;
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 1.3rem;
+    }
+    .mainphilosophers p{
+        margin-top: 3rem;
+    }
+    .howcontent p{
+        margin-top: 3.5rem;
     }
 
 }
